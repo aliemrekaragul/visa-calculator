@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tourist Visa Calculator</title>
+  <style>
+    .entry-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .entry-container input[type="date"] {
+      margin-right: 10px;
+    }
+
+    .entry-container .delete-button {
+      margin-left: 10px;
+      cursor: pointer;
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    #entryList {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #entryList li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Jimmy's Visa Calculator</h1>
+
+  <div class="entry-container">
+    <label for="entryDate">Entry Date:</label>
+    <input type="date" id="entryDate" required />
+    <label for="exitDate">Exit Date:</label>
+    <input type="date" id="exitDate" required />
+    <button onclick="addEntry()">+</button>
+  </div>
+
+  <ul id="entryList"></ul>
+
+  <button onclick="calculateDaysLeft()">Calculate</button>
+  <button onclick="refresh()">Refresh</button>
+
+  <br /><br />
+
+  <p id="result" style="color: blue"></p>
+  <p id="message" style="color: blue"></p>
+  <p id="warningMessage" style="color: red"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
