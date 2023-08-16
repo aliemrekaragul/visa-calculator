@@ -87,8 +87,8 @@ function calculateDaysLeft() {
   // Find the earliest entry date among all entries
   var earliestEntry = new Date(currentDate);
   for (var i = 0; i < entries.length; i++) {
-      if (entries[i].exit < earliestEntry) {
-          earliestEntry = entries[i].exit;
+      if (entries[i].entry < earliestEntry) {
+          earliestEntry = entries[i].entry;
       }
   }
 
